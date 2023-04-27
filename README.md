@@ -5,17 +5,19 @@ Prerequisites
 
 Before installing the PostgreSQL server, we must ensure that the system meets the following installation requirements:
 
-    Pre-Installed Debian 11 or Ubuntu 22.04
-    A regular user with sudo rights
-    An active internet connection
-    At least 2 GB of RAM with an additional 512 MB of disk space. Please note that this is a minimal requirement for the demo environment. The actual      hardware configuration will vary with data volume.
+Pre-Installed Debian 11 or Ubuntu 22.04
+A regular user with sudo rights
+An active internet connection
+At least 2 GB of RAM with an additional 512 MB of disk space. Please note that this is a minimal requirement for the demo environment. The actual      hardware configuration will vary with data volume.
 
 1) Enable PostgreSQL Package Repository
 
 PostgreSQL 15 package is not available yet in the default package repository, so enable its official package repository using following commands.
 
 $ sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+
 $ wget -qO- https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo tee /etc/apt/trusted.gpg.d/pgdg.asc &>/dev/null
+
 $ sudo apt update
 
 2) Install PostgreSQL 15 Database Server and Client
