@@ -48,6 +48,20 @@ Let’s verify that the password has been set successfully. So first, terminate 
 
 postgres=# \q
 
+Output of above commands,
+
+![psql-2-ubuntu-linux](https://user-images.githubusercontent.com/131807761/235006878-aea04791-1ecc-4fc6-9c0f-ce8084f2ef68.png)
+Now, let’s connect to the database server again:
+
+$ psql -h localhost -U postgres
+
+Let’s enter the demoPassword string as a password and now we are connected to the database.
+
+![psql-3-ubuntu-linux](https://user-images.githubusercontent.com/131807761/235006700-b30bca38-914e-4f19-a056-1a002fcc7975.png)
+
+
+4) Configure PostgreSQL to Allow Remote Connections
+
 
 
 
