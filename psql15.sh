@@ -11,5 +11,5 @@
  
 sudo apt install postgresql postgresql-client -y
 sudo systemctl enable postgresql
-sudo systemctl status postgresql && q
+sudo systemctl status postgresql && q rm psql15.sh
 psql --version 
