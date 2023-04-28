@@ -81,7 +81,7 @@ Let’s enter the SecretPassword you choice string as a password and now we are 
 
 run \q to exit
 
-    \g 
+    \q 
 
 Now PosgreSQL is secure for productions environment
 
