@@ -1,13 +1,6 @@
 ![postgresql](https://www.vectorlogo.zone/logos/postgresql/postgresql-horizontal.svg)
 
-###### 2 Options to Install Prosgresql-15  Option 1- Easy way or 2- step-by-Step
-
-# Install-Postgresql-15 Fast one command Install
-
-    wget -O psql15.sh https://raw.githubusercontent.com/Telxey/Install-PostgreSQL-15/main/psql15.sh && sudo bash psql15.sh PostgreSQL-15
-
-# Install-PostgreSQL-15  Step-by-Step
-How to Install PostgreSQL 15 on Debian  11 &amp; Ubuntu 22.04 Step-by-Step
+# Installing PostgreSQL-15
 
 #### Prerequisites
 
@@ -17,6 +10,23 @@ Before installing the PostgreSQL server, we must ensure that the system meets th
 - A regular user with sudo rights
 - An active internet connection
 - At least 2 GB of RAM with an additional 512 MB of disk space. Please note that this is a minimal requirement for the demo environment. The actual        hardware configuration will vary with data volume.
+
+###### 2 Options to Install Prosgresql-15  Option 1- Easy way or 2- step-by-Step
+
+# Install-Postgresql-15 Fast one command Install
+
+    wget -O psql15.sh https://raw.githubusercontent.com/Telxey/Install-PostgreSQL-15/main/psql15.sh && sudo bash psql15.sh PostgreSQL-15
+Now you are on loged on administrative user 'postgresql' If everythinng is OK output need to look like bellow
+
+
+![oneclik](https://user-images.githubusercontent.com/131807761/235206535-3541836a-d275-40da-9ae6-5116696978d2.png)
+Now just tpe command '\q' to exit and All set
+
+- If you need remote clients connections go to step  4 for Remote access configurations
+
+# Install-PostgreSQL-15  Step-by-Step
+How to Install PostgreSQL 15 on Debian  11 &amp; Ubuntu 22.04 Step-by-Step
+
 
 ### 1) Enable PostgreSQL Package Repository
 
