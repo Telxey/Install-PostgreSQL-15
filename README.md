@@ -79,28 +79,65 @@ Let’s enter the SecretPassword you choice string as a password and now we are 
 
 ![passwd-down](https://user-images.githubusercontent.com/131807761/235140826-81d3f944-2df7-479c-8393-532e18f89bd9.png)
 
+run \q to exit
+
+    \g 
+
 Now PosgreSQL is secure for productions environment
 
 ### 4) Configure PostgreSQL to Allow Remote Connections
 
-By default, PostgreSQL accepts connections from the localhost only. However, we can easily modify the configuration to allow connection from remote clients.
-PostgreSQL reads its configuration from the postgresql.conf file which is located in the /etc/postgresql/<version>/main/ directory. Here, the version indicates the major version of PostgreSQL.
-For example, in our case the full path of the file is /etc/postgresql/15/main/postgresql.conf.
-Now, open the postgresql.conf file in a text editor, uncomment the line that starts with the listen_addresses, and replace ‘localhost’ with ‘*’.
-This setting is located under the CONNECTIONS AND AUTHENTICATION section. After modification the file will look like this:
+By default, PostgreSQL accepts connections from the localhost only. we can easily modify to allow connection from remote clients.
+
+PostgreSQL reads its configuration from the postgresql.conf file directory. Here, the version indicates the major version of PostgreSQL.
+       
+   For example, file which is located in the '/etc/postgresql/version/main/'
+   
+   Our example, in our case the full path of the file is '/etc/postgresql/15/main/postgresql.conf'
+
+open the postgresql.conf file in a text editor, uncomment the line that starts with the listen_addresses, and replace ‘localhost’ with ‘*’.
+change PORT 5432 if you prefer, This setting is located under the CONNECTIONS AND AUTHENTICATION section. 
+   
+    sudo nano /etc/postgresql/15/main/postgresql.conf    
+
+![remote1](https://user-images.githubusercontent.com/131807761/235156452-17089268-7d95-48dd-8f88-b2288ddbda88.png)
 
 
+After modification the file will look like this:
 
+![remote2](https://user-images.githubusercontent.com/131807761/235159394-6326b82e-e93e-44bc-86b2-d40c35d0c698.png)
 
+Save and close the file.
 
+Next, edit the IPv4 local connections section of the pg_hba.conf file to allow IPv4 connections from all clients. Please note that this file is also located in /etc/postgresql/15/main/ directory. at the end of file modify HOST_IP as below
 
+    sudo nano /etc/postgresql/15/main/pg_hba.conf
 
+![ipconfg1](https://user-images.githubusercontent.com/131807761/235167670-a7d71816-4b2c-42a9-9ba2-63f95b6d33b5.png)
 
+After modification the file will look like this:
 
+![ipconf2](https://user-images.githubusercontent.com/131807761/235168921-c69b2088-02ee-417c-a1c2-8f303dad7ddc.png)
 
+use 0.0.0.0/0 to accept reemote connections from anywhere or espesific subnet or IP you need
 
+In case, Ubuntu firewall is running on your system then allow PostgreSQL 5432 port using following command,
 
+    sudo ufw allow 5432/tcp
+Restart PostgreSQL service and verify it’s up and running:
 
+    sudo systemctl restart postgresql
+    sudo systemctl status postgresql
+
+### 5) Verifying Remote Connection
+
+Now, let’s try to access DB from remote client.
+
+In this example, 71.104.67.117 is the IP address of the PostgreSQL database server. 
+
+      psql -h 71.107.67.117 -U postgres
+      
+      
 
 
 
