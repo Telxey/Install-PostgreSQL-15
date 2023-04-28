@@ -2,7 +2,7 @@
 
 # Install-Postgresql-15 Fast one command Install
 
-#### wget -O psql15.sh https://raw.githubusercontent.com/Telxey/Install-PostgreSQL-15/main/psql.sh && bash psql15.sh postgesl-15
+#### wget -O psql15.sh hhttps://raw.githubusercontent.com/Telxey/Install-PostgreSQL-15/main/psql15.sh && bash psql15.sh postgesl-15
 
 # Install-PostgreSQL-15  Step-by-Step
 How to Install PostgreSQL 15 on Debian  11 &amp; Ubuntu 22.04 Step-by-Step
