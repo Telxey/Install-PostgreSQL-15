@@ -15,5 +15,5 @@ sudo systemctl enable postgresql
 sudo systemctl status postgresql
 psql --version
 psql -h localhost -U postgres
-psql --command '\q'
+postgres psql --command '\q'
 rm psql15.sh
