@@ -10,9 +10,8 @@
  #2) Install PostgreSQL 15 Database Server and Client
  
 sudo apt install postgresql postgresql-client -y
-sudo -u postgres psql 
-psql -U \password
-psql -U \q
+sudo -u postgres psql -U --command '\password postgres'
+psql -U --command '\q'
 sudo systemctl enable postgresql
 sudo systemctl status postgresql
 psql --version
