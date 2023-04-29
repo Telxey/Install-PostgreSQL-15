@@ -38,7 +38,7 @@ PostgreSQL 15 package is not available yet in the default package repository, so
     wget -qO- https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo tee /etc/apt/trusted.gpg.d/pgdg.asc &>/dev/null
 .
 
-    sudo apt update
+    sudo apt update && sudo apt upgrade -y
 
 ### 2) Install PostgreSQL 15 Database Server and Client
 
@@ -145,7 +145,7 @@ Now, let’s try to access DB from remote client.
 
 In this example, 71.104.67.117 is the IP address of the PostgreSQL database server. 
 
-      psql -h 71.107.67.117 -U postgres
+    psql -h 71.107.67.117 -U postgres
       
       
 
