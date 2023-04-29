@@ -18,9 +18,11 @@ Before installing the PostgreSQL server, we must ensure that the system meets th
     wget -O psql15.sh https://raw.githubusercontent.com/Telxey/Install-PostgreSQL-15/main/psql15.sh && sudo bash psql15.sh PostgreSQL-15
 Now you are on loged on administrative user 'postgresql' If everythinng is OK output need to look like bellow
 
+![oneclik](https://user-images.githubusercontent.com/131807761/235279045-fab02cc4-25e0-4411-be6e-73f23de76bb3.png)
 
-![oneclik](https://user-images.githubusercontent.com/131807761/235206535-3541836a-d275-40da-9ae6-5116696978d2.png)
 Now just tpe command '\q' to exit and All set
+
+    \q
 
 - If you need remote clients connections go to step  4 for Remote access configurations
 
@@ -143,11 +145,16 @@ Restart PostgreSQL service and verify it’s up and running:
 
 Now, let’s try to access DB from remote client.
 
-In this example, 71.104.67.117 is the IP address of the PostgreSQL database server. 
+In this example, 23.227.173.28 is the IP address of the PostgreSQL database server. And use remote client from another region
 
-    psql -h 71.107.67.117 -U postgres
+    psql -h 23.227.173.28 -U postgres
       
-      
+  ![term1](https://user-images.githubusercontent.com/131807761/235279166-b24e45b9-3af5-41be-bf8f-2be0778918ed.png)
+  
+  If have a Command 'psql' not found, error can fix installing client use command bellow
+  
+  
+    
 
 
 
