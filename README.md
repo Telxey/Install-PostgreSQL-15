@@ -153,11 +153,20 @@ In this example, 23.227.173.28 is the IP address of the PostgreSQL database serv
   
   If have a Command 'psql' not found, error can fix installing client use command bellow
   
-  
+    sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+.    
+
+    wget -qO- https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo tee /etc/apt/trusted.gpg.d/pgdg.asc &>/dev/null
+.
+
+    sudo apt update && sudo apt install postgresql-client -y
+And run again  
+
+    psql -h 23.227.173.28 -U postgres
     
+ ![final](https://user-images.githubusercontent.com/131807761/235279888-8327947d-f8c3-4afd-a530-97b604e40cf2.png)   
+    
+- connections successful
 
-
-
-
-
-
+### - DONE -
+    
