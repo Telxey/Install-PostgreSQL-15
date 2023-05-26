@@ -168,5 +168,14 @@ And run again
     
 - connections successful
 
+#### Additional Commands:
+PostgresSQL restart Command
+     
+    sudo systemctl restart postgresql
+
+Uninstall PostgresSQL
+     
+    sudo apt-get --purge remove postgresql postgresql-*
+
 ### - DONE -
     
